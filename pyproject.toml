@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "spacecraft-detection"
+name = "bubbles-detection"
 version = "0.1.0"
 description = "Удачи запустить это. Ну у нас на компе работало... UwU"
 authors = [

@@ -1,5 +1,5 @@
 {
-  "name": "spacecraft_detection",
+  "name": "bubbles_detection",
   "version": "1.0.0",
   "description": "Обнаружение космических аппаратов на снимке",
   "private": true,

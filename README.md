@@ -22,7 +22,7 @@
 ## Структура репозитория
 
 ```bash
-spacecraft-detection/
+bubbles-detection/
 ├── core/                   # Основной код
 │   ├── configs/            # Конфигурации Hydra
 │   ├── weights/            # Директория для весов для работы app.py
@@ -47,8 +47,8 @@ spacecraft-detection/
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/DaniilMako/spacecraft-detection
-cd spacecraft-detection
+git clone https://github.com/DaniilMako/bubbles-detection
+cd bubbles-detection
 ```
 
 2. Создайте виртуальное окружение и установите зависимости:
@@ -90,7 +90,7 @@ dvc pull
 6. Загрузите веса модели:
 ```bash
 # Веса модели должны быть загружены/перемещены в weights/model.pt
-dvc get https://huggingface.co/DaniilMako/spacecraft-detection model.pt -o core/weights
+dvc get https://huggingface.co/DaniilMako/bubbles-detection model.pt -o core/weights
 ```
 
 ## Train

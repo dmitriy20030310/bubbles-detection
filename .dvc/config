@@ -3,7 +3,7 @@
     autostage = true
 
 ['remote "models"']
-    url = https://huggingface.co/DaniilMako/spacecraft-detection
+    url = https://huggingface.co/DaniilMako/bubbles-detection
     ssl_verify = false
 
 ['remote "mylocal"']

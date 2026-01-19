@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <header className="sidebar-header">
       <div className="sidebar-brand">
-        <h1>Детектор космических аппаратов</h1>
+        <h1>Детектор пузырей</h1>
       </div>
 
       {/* Гамбургер-иконка (только на мобильных) */}

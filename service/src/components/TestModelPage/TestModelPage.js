@@ -60,7 +60,7 @@ const TestModelPage = () => {
 
   return (
     <section id="test-model" className="test-model-page">
-      <h2>Тестирование модели детекции спутников</h2>
+      <h2>Тестирование модели детекции пузырей</h2>
 
       <div className="upload-section">
         <input type="file" accept="image/*" onChange={handleFileChange} />

@@ -1,14 +1,11 @@
-# 📁 Dataset: Spacecraft Detection
+# 📁 Dataset: Bubble Detection
 
-Этот датасет используется для обучения YOLO-модели детекции космических аппаратов.
+Этот датасет используется для обучения YOLO-модели детекции пузырей воздуха.
 
 ## 🌐 Источники данных
 
 1. **Кастомный датасет (3750 изображений, без `val`)**
-   - [Kaggle: Custom Pose Bowl Detection Track](https://www.kaggle.com/datasets/naxumsharik/custom-pose-bowl-detection-track-3750-images)
-
-2. **Основной датасет**
-   - [Kaggle: PoseBowl](https://www.kaggle.com/datasets/aparajuli/posebowl)
+Был создан кастомный датасет. Из 12 видео источников было извлечено 3750 изображений.
 
 ---
 
@@ -47,7 +44,7 @@ dataset/labels/
 
 ```bash
 dvc remote list
-# mylocal .\satellite-detection\.dvc\.dvc-storage    (default)
+# mylocal .\bubble-detection\.dvc\.dvc-storage    (default)
 ```
 
 Если нет — настройте:

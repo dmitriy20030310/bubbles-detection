@@ -1,10 +1,9 @@
 [tool.poetry]
 name = "bubbles-detection"
 version = "0.1.0"
-description = "Удачи запустить это. Ну у нас на компе работало... UwU"
+description = "Оно живое"
 authors = [
-    "D. Makovetskii ^_^",
-    "A. Rempel ^_~"
+    "D. Kil",
 ]
 readme = "README.md"
 

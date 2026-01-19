@@ -1,0 +1,8 @@
+# core/configs/data/data.yaml
+path: dataset/images
+train: train/
+val: val/
+test: test/
+
+names:
+  0: spacecraft

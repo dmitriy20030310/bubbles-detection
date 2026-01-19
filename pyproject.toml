@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "spacecraft-detection"
+version = "0.1.0"
+description = "Удачи запустить это. Ну у нас на компе работало... UwU"
+authors = [
+    "D. Makovetskii ^_^",
+    "A. Rempel ^_~"
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.15"
+fastapi = ">=0.127.0"
+uvicorn = {extras = ["standard"], version = ">=0.40.0"}
+ultralytics = "==8.3.241"
+torch = "==2.9.1"
+torchvision = "==0.24.1"
+opencv-python = "==4.12.0.88"
+pydantic = ">=2.12.0"
+numpy = ">=2.0.0"
+dill = ">=0.4.0"
+polars = ">=1.30.0"
+python-multipart = ">=0.0.21"
+annotated-types = ">=0.7.0"
+mlflow = ">=3.8.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">=4.5.1,<5.0.0"
+black = ">=25.12.0,<26.0.0"
+isort = ">=7.0.0,<8.0.0"
+flake8 = ">=7.3.0,<8.0.0"
+dvc = {extras = ["s3"], version = ">=3.65.0,<4.0.0"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

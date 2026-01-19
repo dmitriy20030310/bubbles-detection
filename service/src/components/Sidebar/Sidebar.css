@@ -1,0 +1,105 @@
+/* frontend/src/components/Sidebar/Sidebar.css */
+
+.sidebar-header {
+  background-color: #3386d8;
+  color: white;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-brand h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Гамбургер-кнопка — только на мобильных */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Мобильное меню — общие стили */
+.nav-mobile {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.nav-mobile ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.nav-mobile a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-mobile a:hover,
+.nav-mobile a.active {
+  background-color: #004d80;
+}
+
+/* Адаптация под мобильные */
+@media (max-width: 768px) {
+  .sidebar-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sidebar-brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-mobile {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    background-color: #2c73b4;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    flex-direction: column;
+  }
+
+  .nav-mobile.open {
+    max-height: 300px;
+    padding: 0.5rem 0;
+  }
+
+  .nav-mobile a {
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-mobile a:hover,
+  .nav-mobile a.active {
+    border-radius: 0;
+  }
+}

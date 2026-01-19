@@ -1,0 +1,6 @@
+# core/configs/data/paths.yaml
+data_yaml: "data.yaml"
+weights_dir: "weights"
+model_path: "weights/model.pt"
+input_image: "test.jpg"
+output_dir: "results"

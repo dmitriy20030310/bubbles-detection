@@ -1,0 +1,86 @@
+# 📁 Dataset: Spacecraft Detection
+
+Этот датасет используется для обучения YOLO-модели детекции космических аппаратов.
+
+## 🌐 Источники данных
+
+1. **Кастомный датасет (3750 изображений, без `val`)**
+   - [Kaggle: Custom Pose Bowl Detection Track](https://www.kaggle.com/datasets/naxumsharik/custom-pose-bowl-detection-track-3750-images)
+
+2. **Основной датасет**
+   - [Kaggle: PoseBowl](https://www.kaggle.com/datasets/aparajuli/posebowl)
+
+---
+
+## Структура датасета перед обучением (после того, как скачали датасет)
+spacecraft-detection/
+├── dataset/                    # Датасет для обучения
+│   ├── images/          # Изображения
+│   │   ├── test/
+│   │   ├── train/
+│   │   ├── val/
+│   ├── labels/          # Метки изображений
+│   │   ├── test/
+│   │   ├── train/
+│   │   ├── val/
+
+---
+
+### 1. Убедитесь, что установлены DVC и Git
+```bash
+pip install dvc dvc[s3]  # или dvc[gs], dvc[azure] — в зависимости от remote
+```
+
+### 2. Восстановите данные
+```bash
+dvc pull
+```
+После этого появятся:
+
+dataset/images/train/  
+dataset/images/val/  
+dataset/labels/  
+
+## Как настроить локальное DVC-хранилище
+Если вы обновляете данные или модель:
+### 1. Убедитесь, что DVC настроен:
+
+```bash
+dvc remote list
+# mylocal .\satellite-detection\.dvc\.dvc-storage    (default)
+```
+
+Если нет — настройте:
+
+```bash
+mkdir .dvc-storage
+dvc remote add -d mylocal .dvc-storage
+```
+### 2. Добавьте данные в DVC
+
+```bash
+dvc add dataset/images
+dvc add dataset/labels
+#  Отправьте данные в локальное хранилище
+dvc push
+# Закоммитьте DVC-файлы в Git
+git add \
+  dataset/images.dvc \
+  dataset/labels.dvc \
+  .dvc/config
+
+git commit -m "Update dataset: images and labels"
+git push
+
+```
+
+### 3. После обучения добавьте модель:
+
+```bash
+dvc add core/weights/model.pt
+dvc push
+# Закоммитьте DVC-файлы в Git
+git add core/weights/model.pt.dvc
+git commit -m "Update model"
+git push
+```

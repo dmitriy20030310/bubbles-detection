@@ -1,0 +1,10 @@
+[core]
+    remote = mylocal
+    autostage = true
+
+['remote "models"']
+    url = https://huggingface.co/DaniilMako/spacecraft-detection
+    ssl_verify = false
+
+['remote "mylocal"']
+    url = .dvc-storage

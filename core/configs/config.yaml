@@ -1,0 +1,17 @@
+# configs/config.yaml
+defaults:
+  - _self_
+  - yolov8
+  - default
+  - paths
+  - mlflow
+
+seed: 42
+git_commit: ${oc.env:GIT_COMMIT, ${oc.env:GITHUB_SHA, unknown}}
+debug: false
+
+data:
+  path: ${data.paths.data_yaml}
+
+model:
+  path: ${data.paths.model_path}

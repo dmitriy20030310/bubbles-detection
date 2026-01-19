@@ -1,0 +1,5 @@
+# configs/model/yolov8.yaml
+weights: "yolov8n.pt"
+img_size: 640
+conf_threshold: 0.25
+iou_threshold: 0.45

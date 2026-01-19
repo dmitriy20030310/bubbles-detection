@@ -18,7 +18,7 @@ from omegaconf import DictConfig
 import hydra
 
 
-app = FastAPI(title="Spacecraft Detection API")
+app = FastAPI(title="Bubble Detection API")
 
 # Настройка CORS
 app.add_middleware(
